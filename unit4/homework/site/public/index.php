@@ -1,7 +1,6 @@
 <?php
 
 require_once '../engine/funcs.php';
-require_once '../engine/helpers.php';
 
 ?>
 <!doctype html>
@@ -50,12 +49,10 @@ require_once '../engine/helpers.php';
 
 <main role="main" class="site-main main">
 
-    <?php
-    $pageOpenCount = getPageOpenCount();
-    ?>
+
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Album example <?= $pageOpenCount ?></h1>
+            <h1 class="jumbotron-heading">Album example</h1>
         </div>
     </section>
 
