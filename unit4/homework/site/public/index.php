@@ -59,8 +59,28 @@ require_once '../engine/funcs.php';
 
     <div class="album py-5 bg-light">
         <div class="container">
-
             <div class="row">
+                <?php
+                function getImages()
+                {
+                    $images = [];
+                    $files = scandir('./img/gallery');
+                    foreach ($files as $file) {
+                        $pathinfo = pathinfo($file);
+                        if (in_array($pathinfo['extension'], ['png', 'jpg', 'jpeg', 'svg'])) {
+                            $images[] = '/img/gallery/'.$file;
+                        }
+                    }
+
+                    return $images;
+                }
+
+                ?>
+
+                <?php
+                $images = getImages();
+                print_r($images);
+                ?>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <a data-fancybox="gallery" href="/img/gallery/BS_Dashboard-768x576.png">
