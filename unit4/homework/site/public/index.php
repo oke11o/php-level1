@@ -3,8 +3,6 @@
 require_once '../engine/funcs.php';
 
 ?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,15 +17,19 @@ require_once '../engine/funcs.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.0/examples/navbars/navbar.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css"/>
 </head>
 
 <body>
 
 
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
                 aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,19 +45,50 @@ require_once '../engine/funcs.php';
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search">
             </form>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main role="main">
-        <div class="jumbotron">
-            <div class="col-sm-8 mx-auto">
-                <h1>Navbar examples</h1>
-                <p>
-                    <a class="btn btn-primary" href="/" role="button">View navbar docs &raquo;</a>
-                </p>
+<main role="main" class="site-main main">
+
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Album example</h1>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a data-fancybox="gallery" href="/img/gallery/BS_Dashboard-768x576.png">
+                            <img class="card-img-top" src="/img/gallery/BS_Dashboard-768x576.png" alt="Card image cap">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a data-fancybox="gallery" href="/img/gallery/BS_Application-768x576.png">
+                            <img class="card-img-top" src="/img/gallery/BS_Application-768x576.png"
+                                 alt="Card image cap">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <a data-fancybox="gallery" href="/img/gallery/BS_Marketing-768x576.png">
+                            <img class="card-img-top" src="/img/gallery/BS_Marketing-768x576.png" alt="Card image cap">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
-</div>
+    </div>
+
+</main>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -69,6 +102,8 @@ require_once '../engine/funcs.php';
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
 </body>
 </html>
 
