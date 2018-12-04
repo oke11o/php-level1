@@ -1,6 +1,6 @@
 <?php
 
-require_once '../engine/funcs.php';
+require_once '../engine/init.php';
 
 ?>
 <!doctype html>
