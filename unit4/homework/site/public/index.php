@@ -1,6 +1,7 @@
 <?php
 
 require_once '../engine/funcs.php';
+require_once '../engine/helpers.php';
 
 ?>
 <!doctype html>
@@ -20,7 +21,6 @@ require_once '../engine/funcs.php';
 
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.0/examples/navbars/navbar.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css"/>
 </head>
@@ -50,10 +50,12 @@ require_once '../engine/funcs.php';
 
 <main role="main" class="site-main main">
 
-
+    <?php
+    $pageOpenCount = getPageOpenCount();
+    ?>
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Album example</h1>
+            <h1 class="jumbotron-heading">Album example <?= $pageOpenCount ?></h1>
         </div>
     </section>
 
@@ -61,49 +63,11 @@ require_once '../engine/funcs.php';
         <div class="container">
             <div class="row">
                 <?php
-                function getImages()
-                {
-                    $images = [];
-                    $files = scandir('./img/gallery');
-                    foreach ($files as $file) {
-                        $pathinfo = pathinfo($file);
-                        if (in_array($pathinfo['extension'], ['png', 'jpg', 'jpeg', 'svg'])) {
-                            $images[] = '/img/gallery/'.$file;
-                        }
-                    }
-
-                    return $images;
+                $images = getImages('./img/gallery');
+                foreach ($images as $image) {
+                    include '../templates/gallery_item.php';
                 }
-
                 ?>
-
-                <?php
-                $images = getImages();
-                print_r($images);
-                ?>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <a data-fancybox="gallery" href="/img/gallery/BS_Dashboard-768x576.png">
-                            <img class="card-img-top" src="/img/gallery/BS_Dashboard-768x576.png" alt="Card image cap">
-                        </a>
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <a data-fancybox="gallery" href="/img/gallery/BS_Application-768x576.png">
-                            <img class="card-img-top" src="/img/gallery/BS_Application-768x576.png"
-                                 alt="Card image cap">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <a data-fancybox="gallery" href="/img/gallery/BS_Marketing-768x576.png">
-                            <img class="card-img-top" src="/img/gallery/BS_Marketing-768x576.png" alt="Card image cap">
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
