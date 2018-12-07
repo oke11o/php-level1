@@ -17,6 +17,12 @@ VALUES
        ('Петр','Петрович','Петров'),
        ('Семен','Семенович','Семенов'),
        ('Николай','Николаевич','Николаев');
+       
+       
+INSERT INTO employee (first_name, middle_name, last_name)
+VALUES 
+       ('Марина','Иванович','Иванов');
+       
 
 UPDATE employee SET first_name='Василий' WHERE id_employee=1;
 
