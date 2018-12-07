@@ -52,7 +52,12 @@ require_once '../engine/init.php';
 
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Album example</h1>
+            <h1 class="jumbotron-heading">Employees</h1>
+            <?php
+            $employees = getEmployees($mysqliConnect, 'DESC');
+            include '../templates/employees.php';
+            ?>
+
         </div>
     </section>
 
