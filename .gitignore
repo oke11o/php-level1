@@ -1,3 +1,7 @@
 /.idea
 /unit4/lesson/examples/f_.txt
 /unit4/homework/site/data/page_open_count.txt
+/unit6/lesson/site/data/page_open_count.txt
+/unit6/lesson/site/config/config.php
+/unit6/lesson/site/public/img/gallery/uploaded/*
+!/unit6/lesson/site/public/img/gallery/uploaded/.gitkeep
