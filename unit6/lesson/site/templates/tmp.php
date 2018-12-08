@@ -41,31 +41,8 @@
 </nav>
 
 <main role="main" class="site-main main">
-    <?php
-    $pageOpenCount = getPageOpenCount();
-    ?>
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading"><?= $pageH1 ?></h1>
-        </div>
-        <?php
-        $employees = getEmployees($mysqlConnect, $search);
-        include '../templates/chunks/employees.php';
-        ?>
-        <p>Показов сайта <?= $pageOpenCount ?></p>
-    </section>
-
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <?php
-                $images = getPicturesAssoc($mysqlConnect, $galleryType);
-                foreach ($images as $image) {
-                    include '../templates/chunks/gallery_item.php';
-                }
-                ?>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Временный шаблон</h1>
     </div>
 </main>
 
